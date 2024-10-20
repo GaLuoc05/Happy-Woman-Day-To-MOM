@@ -14,10 +14,10 @@ setInterval(createHeart, 1000);
 // Hover effect to change letter image
 letterFront.addEventListener("mouseover", () => {
     if (!letter_opened) {
-        letterFront.querySelector('img').src = "hover-letter.png"; // Đổi ảnh khi hover
+        letterFront.querySelector('img').src = "img/hover-letter.png"; // Đổi ảnh khi hover
 
         flowers.forEach(flower => {
-            flower.src = "opening-flower0.png"; // Trổ hoa
+            flower.src = "img/opening-flower0.png"; // Trổ hoa
             flower.style.transform = "scale(1.05)";
         });
     }
@@ -25,10 +25,10 @@ letterFront.addEventListener("mouseover", () => {
 
 letterFront.addEventListener("mouseout", () => {
     if (!letter_opened) {
-        letterFront.querySelector('img').src = "closed-letter.png"; // Quay lại ảnh gốc
+        letterFront.querySelector('img').src = "img/closed-letter.png"; // Quay lại ảnh gốc
 
         flowers.forEach(flower => {
-            flower.src = "opening-flower1.png"; // Trổ hoa
+            flower.src = "img/opening-flower1.png"; // Trổ hoa
             flower.style.transform = "scale(1)";
         });
     }
@@ -48,7 +48,7 @@ letterFront.addEventListener("click", () => {
         paper.classList.remove("hidden");
         paper.style.opacity = 1;
         flowers.forEach(flower => {
-            flower.src = "open-flower.png"; // Trổ hoa
+            flower.src = "img/open-flower.png"; // Trổ hoa
         });
     }, 1000); // Delay 1 giây trước khi giấy trắng hiện ra
 
@@ -67,33 +67,33 @@ letterFront.addEventListener("click", () => {
 
 function letter_open_img(){
     setTimeout(() => {
-        letterFront.querySelector('img').src = "open-letter1.png";
+        letterFront.querySelector('img').src = "img/open-letter1.png";
     }, 100);
     setTimeout(() => {
-        letterFront.querySelector('img').src = "open-letter2.png";
+        letterFront.querySelector('img').src = "img/open-letter2.png";
     }, 200);
     setTimeout(() => {
-        letterFront.querySelector('img').src = "open-letter3.png";
+        letterFront.querySelector('img').src = "img/open-letter3.png";
     }, 300);
     setTimeout(() => {
-        letterFront.querySelector('img').src = "open-letter3.png";
+        letterFront.querySelector('img').src = "img/open-letter3.png";
     }, 400); // Đổi ảnh thư mở
 }
 
 function flowers_blossom(){
     setTimeout(() => {
         flowers.forEach(flower => {
-            flower.src = "opening-flower2.png"; // Trổ hoa
+            flower.src = "img/opening-flower2.png"; // Trổ hoa
         });
     }, 500); // Delay 1 giây trước khi giấy trắng hiện ra
     setTimeout(() => {
         flowers.forEach(flower => {
-            flower.src = "opening-flower3.png"; // Trổ hoa
+            flower.src = "img/opening-flower3.png"; // Trổ hoa
         });
     }, 600); // Delay 1 giây trước khi giấy trắng hiện ra
     setTimeout(() => {
         flowers.forEach(flower => {
-            flower.src = "open-flower1.png"; // Trổ hoa
+            flower.src = "img/open-flower1.png"; // Trổ hoa
         });
     }, 700); // Delay 1 giây trước khi giấy trắng hiện ra
 }
@@ -102,11 +102,11 @@ function flowersAnimate(){
     if (!letter_opened) return;
     switch (flowers_state){
         default: flowers.forEach(flower => {
-            flower.src = "open-flower.png"; // Trổ hoa
+            flower.src = "img/open-flower.png"; // Trổ hoa
             flowers_state = 1;
         });
         case 1: flowers.forEach(flower => {
-            flower.src = "open-flower1.png"; // Trổ hoa
+            flower.src = "img/open-flower1.png"; // Trổ hoa
             flowers_state = 0;
         });
     }
