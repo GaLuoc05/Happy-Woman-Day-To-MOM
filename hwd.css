@@ -1,0 +1,156 @@
+/* Đặt lại mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9baf1;
+    position: relative;
+}
+
+.letter-back {
+    position: absolute;
+    bottom: 10px;
+}
+
+.letter-back-img {
+    width: 300px;
+    height: auto;
+}
+
+.letter-front {
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.letter-front-img {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.letter-front:hover .letter-front-img {
+    transform: scale(1.05);
+}
+
+.flower-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flower {
+    width: 80px;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.paper {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 200px;
+    height: 300px;
+    background-color: rgb(242, 232, 240);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.congrats-message {
+    text-align: center;
+    color: #ff4081;
+    font-size: 1.5em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: riseUp 2s forwards;
+    animation-delay: 1s;
+}
+
+.congrats-message-text {
+    text-align: center;
+    color: rgb(107, 28, 95);
+    font-size: 1.5em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: riseUp 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes riseUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.woman-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.woman {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hearts-container {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    bottom: 10%; /* Xuất hiện từ dưới */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.heart {
+    position: absolute;
+    width: 30px; /* Kích thước của trái tim */
+    height: 30px;
+    background-image: url('heart.png'); /* Thay thế bằng đường dẫn hình ảnh trái tim của bạn */
+    background-size: cover;
+    opacity: 0; /* Khởi tạo ẩn */
+    animation: fly 5s forwards; /* Chạy animation */
+}
+
+@keyframes fly {
+    0% {
+        bottom: 0%;
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%; /* Bay lên khỏi màn hình */
+        opacity: 0; /* Dần biến mất */
+    }
+}
