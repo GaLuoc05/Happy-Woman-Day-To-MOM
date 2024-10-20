@@ -135,7 +135,7 @@ body {
     position: absolute;
     width: 30px; /* Kích thước của trái tim */
     height: 30px;
-    background-image: url('img/heart.png'); /* Thay thế bằng đường dẫn hình ảnh trái tim của bạn */
+    background-image: url('heart.png'); /* Thay thế bằng đường dẫn hình ảnh trái tim của bạn */
     background-size: cover;
     opacity: 0; /* Khởi tạo ẩn */
     animation: fly 5s forwards; /* Chạy animation */
